@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+    <script src="{{url_for('static', filename = 'script.js')}}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="h-60 bg-[rgb(45,135,185)] flex items-center justify-center text-white
+    font-bold text-2xl md:text-4xl">PortFolio</div>
+    <nav class="bg-gray-800 text-white grid grid-cols-1 min-[900px]:grid-cols-4 gap-5
+    py-2 px-2 min-[1100px]:px-0">
+        <div class="text-sm flex items-center min-[900px]:justify-center font-semibold px-1 py-1 space-x-3">
+            <div class="h-[30px] w-[30px] flex items-center justify-center bg-[rgb(70,120,210)] text-white">
+                <i class="fa fa-linkedin"></i>
+            </div>
+            <a href="https://www.linkedin.com/in/avilash-sengupta-806804237">
+                <span>LinkedIn Profile</span>
+            </a>
+        </div>
+        <div class="text-sm flex items-center min-[900px]:justify-center font-semibold px-1 py-1 space-x-3">
+            <div class="h-[30px] w-[30px] flex items-center justify-center bg-[rgb(25,180,75)] text-white">
+                <i class="fa fa-github"></i>
+            </div>
+            <a href="https://www.github.com/avilashsengupta">
+                <span>GitHub Profile</span>
+            </a>
+        </div>
+        <div class="text-sm flex items-center min-[900px]:justify-center font-semibold px-1 py-1 space-x-3
+        min-[900px]:col-span-2 col-span-1">
+            <div class="h-[30px] w-[30px] flex items-center justify-center bg-[rgb(220,50,50)] text-white">
+                <i class="fa fa-envelope"></i>
+            </div>
+            <span>avilashsengupta.iembca2023@gmail.com</span>
+        </div>
+    </nav>
+    <div class="grid grid-cols-1 md:grid-cols-10 text-sm">
+        <div class="bg-slate-200 row-start-2 row-end-3 md:row-start-1 md:row-end-2 md:col-start-1 md:col-end-5 p-3">
+            <div class="grid grid-cols-1 gap-5">
+                <div>
+                    <p class="font-bold">PERSONAL DETAILS</p>
+                    <hr class="border-[1px] border-slate-400">
+                </div>
+                <ul>
+                    <li><span class="font-semibold">Name</span>: Avilash Sengupta</li>
+                    <li><span class="font-semibold">Phone</span>: 9874093975</li>
+                    <li><span class="font-semibold">Date of Birth</span>: 15/10/2001</li>
+                    <li><span class="font-semibold">Gender</span>: Male</li>
+                    <li><span class="font-semibold">Nationality</span>: Indian</li>
+                    <li><span class="font-semibold">Location</span>: Kolkata, West Bengal</li>
+                </ul>
+                <div>
+                    <p class="font-bold">TECHNICAL SKILLS</p>
+                    <hr class="border-[1px] border-slate-400">
+                </div>
+                <ul class="grid grid-cols-1 gap-1">
+                    <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                        <div class="pl-1 flex justify-between items-center">
+                            <span class="font-semibold">Python</span>
+                            <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                            onclick="showDropDown('python-skill')">
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </div>
+                        <div class="px-1 bg-slate-100 hidden" id="python-skill">
+                            <span class="text-[12px]">Data Types</span>
+                            <span class="text-[12px]">Strings</span>
+                            <span class="text-[12px]">Modules - Pandas, Numply, Matplotlib, SKLearn</span>
+                            <span class="text-[12px]">Object Oriented Programming</span>
+                        </div>
+                    </li>
+                    <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                        <div class="pl-1 flex justify-between items-center">
+                            <span class="font-semibold">SQL</span>
+                            <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                            onclick="showDropDown('sql-skill')">
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </div>
+                        <div class="px-1 bg-slate-100 hidden" id="sql-skill">
+                            <span class="text-[12px]">DDL</span>
+                            <span class="text-[12px]">DML</span>
+                            <span class="text-[12px]">TCL</span>
+                            <span class="text-[12px]">Aggregate Functions</span>
+                            <span class="text-[12px]">Where, GroupBy, OrderBy, Having Clauses</span>
+                        </div>
+                    </li>
+                    <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                        <div class="pl-1 flex justify-between items-center">
+                            <span class="font-semibold">HTML CSS</span>
+                            <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                            onclick="showDropDown('html-skill')">
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </div>
+                        <div class="px-1 bg-slate-100 hidden" id="html-skill">
+                            <span class="text-[12px]">HTML5</span>
+                            <span class="text-[12px]">Tailwind CSS</span>
+                        </div>
+                    </li>
+                    <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                        <div class="pl-1 flex justify-between items-center">
+                            <span class="font-semibold">MS Excel</span>
+                            <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                            onclick="showDropDown('excel-skill')">
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </div>
+                        <div class="px-1 bg-slate-100 hidden" id="excel-skill">
+                            <span class="text-[12px]">Conditional Formating</span>
+                            <span class="text-[12px]">Statistical Functions</span>
+                            <span class="text-[12px]">Graph Plotting</span>
+                        </div>
+                    </li>
+                    <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                        <div class="pl-1 flex justify-between items-center">
+                            <span class="font-semibold">SAP ABAP</span>
+                            <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                            onclick="showDropDown('abap-skill')">
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </div>
+                        <div class="px-1 bg-slate-100 hidden" id="abap-skill">
+                            <span class="text-[12px]">Data Dictionary</span>
+                            <span class="text-[12px]">Reports</span>
+                            <span class="text-[12px]">Smart Forms</span>
+                            <span class="text-[12px]">Module Pool</span>
+                            <span class="text-[12px]">Business Application Programming Interface (BAPI)</span>
+                            <span class="text-[12px]">Business Add-Ins (BAdI)</span>
+                            <span class="text-[12px]">Batch Data Communication (BDC)</span>
+                            <span class="text-[12px]">Core Data Services (CDS)</span>
+                            <span class="text-[12px]">ABAP Managed Database Procedure (AMDP)</span>
+                            <span class="text-[12px]">Enhancements</span>
+                            <span class="text-[12px]">Object Oriented Programming<span>
+                        </div>
+                    </li>
+                    <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                        <div class="pl-1 flex justify-between items-center">
+                            <span class="font-semibold">Machine Learning</span>
+                            <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                            onclick="showDropDown('ml-skill')">
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </div>
+                        <div class="px-1 bg-slate-100 hidden" id="ml-skill">
+                            <span class="text-[12px]">Linear Regression</span>
+                            <span class="text-[12px]">Logistic Regression</span>
+                            <span class="text-[12px]">Decision Tree</span>
+                            <span class="text-[12px]">Random Forest</span>
+                            <span class="text-[12px]">K Nearest Neighbors</span>
+                            <span class="text-[12px]">Cross Validation</span>
+                        </div>
+                    </li>
+                    <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                        <div class="pl-1 flex justify-between items-center">
+                            <span class="font-semibold">Flask</span>
+                            <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                            onclick="showDropDown('flask-skill')">
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </div>
+                        <div class="px-1 bg-slate-100 hidden" id="flask-skill">
+                            <span class="text-[12px]">Data Fetching from HTML Forms</span>
+                            <span class="text-[12px]">Jinja Templating</span>
+                            <span class="text-[12px]">Template Inheritance</span>
+                            <span class="text-[12px]">SQL Alchemy</span>
+                        </div>
+                    </li>
+                </ul>
+                <div>
+                    <p class="font-bold">TRAININGS & CERTIFICATIONS</p>
+                    <hr class="border-[1px] border-slate-400">
+                </div>
+                <ul>
+                    <li>AI Data Science and Machine Learning using Python</li>
+                    <li>SAP ABAP with S/4 HANA</li>
+                </ul>
+                <div>
+                    <p class="font-bold">ACHIEVEMENTS</p>
+                    <hr class="border-[1px] border-slate-400">
+                </div>
+                <ul>
+                    <li>Academic Excellence Certificate from IEM</li>
+                    <li>Rank Certificate for 6th rank in 3rd Year from IEM</li>
+                </ul>
+                <div>
+                    <p class="font-bold">LANGUAGES KNOWN</p>
+                    <hr class="border-[1px] border-slate-400">
+                </div>
+                <table class="w-full" cellspacing="2" cellpadding="3">
+                    <tr>
+                        <td class="font-semibold border-[1px] border-slate-500 text-center bg-slate-300">Language</td>
+                        <td class="font-semibold border-[1px] border-slate-500 text-center bg-slate-300">Read</td>
+                        <td class="font-semibold border-[1px] border-slate-500 text-center bg-slate-300">Write</td>
+                        <td class="font-semibold border-[1px] border-slate-500 text-center bg-slate-300">Speak</td>
+                    </tr>
+                    <tr>
+                        <td class="border-[1px] border-slate-500 text-center bg-slate-100">Bengali</td>
+                        <td class="border-[1px] border-slate-500 text-center bg-slate-100"><i class="fa fa-check"></i></td>
+                        <td class="border-[1px] border-slate-500 text-center bg-slate-100"><i class="fa fa-check"></i></td>
+                        <td class="border-[1px] border-slate-500 text-center bg-slate-100"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="border-[1px] border-slate-500 text-center bg-slate-100">Hindi</td>
+                        <td class="border-[1px] border-slate-500 text-center bg-slate-100"><i class="fa fa-close"></i></td>
+                        <td class="border-[1px] border-slate-500 text-center bg-slate-100"><i class="fa fa-close"></i></td>
+                        <td class="border-[1px] border-slate-500 text-center bg-slate-100"><i class="fa fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="border-[1px] border-slate-500 text-center bg-slate-100">English</td>
+                        <td class="border-[1px] border-slate-500 text-center bg-slate-100"><i class="fa fa-check"></i></td>
+                        <td class="border-[1px] border-slate-500 text-center bg-slate-100"><i class="fa fa-check"></i></td>
+                        <td class="border-[1px] border-slate-500 text-center bg-slate-100"><i class="fa fa-check"></i></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row-start-1 row-end-2 md:row-start-1 md:row-end-2 md:col-start-5 md:col-end-11 p-3">
+            <div class="grid grid-cols-1 gap-5">
+                <div>
+                    <p class="font-bold text-sky-800">SUMMARY</p>
+                    <hr class="border-[1px] border-slate-300">
+                </div>
+                <span class="text-justify">I have completed my graduation in Bachelor of Computer Application (BCA)
+                from Institute of Engineering & Management (IEM), Kolkata in 2023. I have gained knowledge on Python,
+                Machine Learning, HTML, SQL and MS Excel. After graduation, I got enrolled in UN IT ERP Academy in
+                the course SAP ABAP with S/4 HANA. I gained knowledge on Module Pools, Smartforms, ALV Reports, BDC,
+                BAPI, BADI, CDS and AMDP. My goal is to work and excel in SAP ABAP Module.</span>
+                <div>
+                    <p class="font-bold text-sky-800">EDUCATIONAL QUALIFICATION</p>
+                    <hr class="border-[1px] border-slate-300">
+                </div>
+                <div class="grid grid-cols-1 gap-2">
+                    <div>
+                        <p class="font-bold underline">Bachelor of Computer Application</p>
+                        <p><span class="font-semibold">Exam</span>: BCA</p>
+                        <p><span class="font-semibold">College</span>: Institute of Engineering & Management</p>
+                        <p><span class="font-semibold">Passout Year</span>: 2023</p>
+                        <p><span class="font-semibold">Score</span>: 88.60%</p>
+                    </div>
+                    <div>
+                        <p class="font-bold underline">Class 12 (CBSE)</p>
+                        <p><span class="font-semibold">Exam</span>: AISSCE</p>
+                        <p><span class="font-semibold">School</span>: Aditya Academy Secondary</p>
+                        <p><span class="font-semibold">Stream</span>: Commerce</p>
+                        <p><span class="font-semibold">Passout Year</span>: 2020</p>
+                        <p><span class="font-semibold">Score</span>: 88.50%</p>
+                    </div>
+                    <div>
+                        <p class="font-bold underline">Class 10 (CBSE)</p>
+                        <p><span class="font-semibold">Exam</span>: AISSE</p>
+                        <p><span class="font-semibold">School</span>: Aditya Academy Secondary</p>
+                        <p><span class="font-semibold">Passout Year</span>: 2018</p>
+                        <p><span class="font-semibold">Score</span>: 90.00%</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="font-bold text-sky-800">PROJECTS</p>
+                    <hr class="border-[1px] border-slate-300">
+                </div>
+                <div class="grid grid-cols-1 gap-2">
+                    <ul class="grid grid-cols-1 gap-1">
+                        <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                            <div class="pl-1 flex justify-between items-center">
+                                <span class="font-semibold">Grad Final Year Project</span>
+                                <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                                onclick="showDropDown('grad-fnlyr')">
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                            </div>
+                            <div class="px-1 bg-slate-200 hidden" id="grad-fnlyr">
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Title</span>:
+                                    <span>A Comparative Study for Salary Prediction Based on Different
+                                    Models of Machine Learning</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Technology</span>:
+                                    <span>Machine Learning Regression Analysis</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Language</span>:
+                                    <span>Python</span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                            <div class="pl-1 flex justify-between items-center">
+                                <span class="font-semibold">Data Science ML Project</span>
+                                <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                                onclick="showDropDown('dsml-prj')">
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                            </div>
+                            <div class="px-1 bg-slate-200 hidden" id="dsml-prj">
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Title</span>:
+                                    <span>Stock Market Prediction</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Technology</span>:
+                                    <span>Machine Learning Regression Analysis</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Language</span>:
+                                    <span>Python</span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                            <div class="pl-1 flex justify-between items-center">
+                                <span class="font-semibold">ABAP ECC Project 1</span>
+                                <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                                onclick="showDropDown('abap-ecc001')">
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                            </div>
+                            <div class="px-1 bg-slate-200 hidden" id="abap-ecc001">
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Title</span>:
+                                    <span>HR Pension Starting Module Pool</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Technology</span>:
+                                    <span>SAP</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Language</span>:
+                                    <span>ABAP</span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                            <div class="pl-1 flex justify-between items-center">
+                                <span class="font-semibold">ABAP ECC Project 2</span>
+                                <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                                onclick="showDropDown('abap-ecc002')">
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                            </div>
+                            <div class="px-1 bg-slate-200 hidden" id="abap-ecc002">
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Title</span>:
+                                    <span>HR Pension Notice SmartForm</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Technology</span>:
+                                    <span>SAP</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Language</span>:
+                                    <span>ABAP</span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                            <div class="pl-1 flex justify-between items-center">
+                                <span class="font-semibold">ABAP ECC Project 3</span>
+                                <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                                onclick="showDropDown('abap-ecc003')">
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                            </div>
+                            <div class="px-1 bg-slate-200 hidden" id="abap-ecc003">
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Title</span>:
+                                    <span>Employee Master ALV Report</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Technology</span>:
+                                    <span>SAP</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Language</span>:
+                                    <span>ABAP</span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                            <div class="pl-1 flex justify-between items-center">
+                                <span class="font-semibold">ABAP ECC Project 4</span>
+                                <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                                onclick="showDropDown('abap-ecc004')">
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                            </div>
+                            <div class="px-1 bg-slate-200 hidden" id="abap-ecc004">
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Title</span>:
+                                    <span>Data Entry Program using Custom BAPI</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Technology</span>:
+                                    <span>SAP</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Language</span>:
+                                    <span>ABAP</span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="grid grid-cols-1 border-[1px] border-slate-400">
+                            <div class="pl-1 flex justify-between items-center">
+                                <span class="font-semibold">ABAP ECC Project 5</span>
+                                <button type="button" class="h-6 w-6 bg-slate-400 text-white font-bold"
+                                onclick="showDropDown('abap-ecc005')">
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                            </div>
+                            <div class="px-1 bg-slate-200 hidden" id="abap-ecc005">
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Title</span>:
+                                    <span>Interactive ALV Report for Monthly & Annual Sales</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Technology</span>:
+                                    <span>SAP</span>
+                                </span>
+                                <span class="text-[12px]">
+                                    <span class="font-bold">Language</span>:
+                                    <span>ABAP</span>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
